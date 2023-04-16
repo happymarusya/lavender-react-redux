@@ -1,5 +1,5 @@
-import AllCategories from "./Filter/AllCategories";
-import Products from "./ProductsComponents/Products";
+import AllCategories from "../Components/Filter/AllCategories";
+import Products from "../Components/ProductsComponents/Products";
 import { motion } from "framer-motion";
 
 const textAnimation = {

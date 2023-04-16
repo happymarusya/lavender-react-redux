@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
-import Video from '../Video';
+import Video from '../../Video';
 import Main from './Main';
+import { Link } from 'react-router-dom';
 
 const textAnimation = {
     hidden: {
@@ -19,6 +20,9 @@ const textAnimation = {
     
 }
 function Home () {
+    const handleClick = (myLink) => () => {
+        window.location.href=myLink;
+    }
     return (
         <div className="header">
             <div className='header-container'>
@@ -27,7 +31,7 @@ function Home () {
                 whileInView='visible'>
                 <motion.h1 custom={1} variants={textAnimation} className='header-title'>Lavender Fields</motion.h1>
                 <motion.p custom={2} variants={textAnimation} className='header-par'>Where relaxation meets beauty...</motion.p>
-                <a href="/shop"><motion.button custom={3} variants={textAnimation} className='header-btn'>SHOP NOW</motion.button></a>
+                <Link to="/shop"><motion.button custom={3} variants={textAnimation} className='header-btn' onClick = {() => handleClick('./shop')}>SHOP NOW</motion.button></Link>
             </motion.div>
             </div>
             <Main/>

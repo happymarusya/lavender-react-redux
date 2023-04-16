@@ -6,12 +6,12 @@ import {
     Link
 } from "react-router-dom";
 import { useState } from "react";
-import Cart from "./Cart/Cart";
+import Cart from "../Cart/Cart";
 import Home from "./Home";
-import Shop from "./Shop";
-import About from "./About";
-import Contact from "./Contact";
-import TotalArticlesNav from "./Cart/TotalArticlesNav";
+import Shop from "../../Pages/Shop"
+import About from "../../Pages/About";
+import Contact from "../../Pages/Contact";
+import TotalArticlesNav from "../Cart/TotalArticlesNav";
 
 
 export const Nav = () => {

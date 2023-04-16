@@ -1,7 +1,7 @@
 import './App.css';
-import { Footer } from './Components/Footer';
-import { Nav } from './Components/Nav';
-import { Shipping } from './Components/Shipping';
+import { Footer } from './Components/Main/Footer';
+import { Nav } from './Components/Main/Nav';
+import { Shipping } from './Components/Main/Shipping';
 
 function App() {
   return (
