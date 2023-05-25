@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { getCartItems, getTotalArticles, getTotalPrice } from "../../redux/cartSlice";
 import CartItem from "./CartItem";
 import { useState } from "react";
+import StripeContainer from "../../Stripe/StripeContainer";
 
 const Cart = () => {
     const [isActive, setActive] = useState(false);
@@ -12,7 +13,7 @@ const Cart = () => {
 
     const toggleItems = () => {
         setActive(!isActive);
-      };
+    };
 
     return ( 
         <div>
@@ -49,7 +50,8 @@ const Cart = () => {
         <p className="span-product"> { totalArticles } article (s) </p>
         <p className="span-product marginCart"> TOTAL : € { totalPrice },00 </p>
         </div>
-        
+
+        {totalArticles === 0 ? '' : <StripeContainer />}
         </div>
     )
 }

@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background-color: #f8eeff;
-    background-image: url(./background.jpg);
+    background-image: url(../public/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     max-height: 150vh;
@@ -414,6 +414,13 @@ h3 {
     padding: 10px;
 }
 
+.successfull {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color : #45235c;
+}
+
 .right {
     float: right;
 }
@@ -563,6 +570,146 @@ h3 {
 .bottomline{
     border-bottom: 1px solid #f8eeff;
 }
+
+.pay-btn {
+    background-color: #885ea2;
+    color: #d4bae4;
+    width: 300px;
+    height: 40px;
+    margin-top: 30px;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 10px 10px 15px 0px #1226459b;
+}
+
+.pay-btn:hover {
+    color: #fafa00;
+    transition: all .9s ease-in-out;
+} 
+
+.pay-btn:focus {
+    color: #fafa00;
+}
+
+.pay-btn:focus-visible {
+    color: #fafa00;
+}
+
+.pay-btn:active {
+    color: #fafa00;
+}
+
+.pay-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+.auth-containe-true {
+    width: 220px;
+    min-height: 220px;
+    background-color: #f8eeff;
+    position: fixed;
+    right: 10px;
+    top: 80px;
+    margin-right: 0px;
+    border-radius: 5px;
+    box-shadow: 0 20px 60px 0 rgba(14, 42, 90, 0.55);
+    transition: 0.2s;
+}
+
+.auth-containe-false {
+    width: 400px;
+    background-color: #f8eeff;
+    position: fixed;
+    right: 0px;
+    top: 80px;
+    margin-right: -450px;
+    border-radius: 5px;
+    box-shadow: 0 20px 60px 0 rgba(14, 42, 90, 0.55);
+    transition: 0.2s;
+}
+
+.box-auth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+}
+
+.btn-login {
+    width: 150px;
+    height: 35px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #885ea2;
+    color: #d4bae4;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 5px;
+    box-shadow: 10px 10px 15px 0px #1226459b;
+}
+
+.btn-login:hover {
+    color: #d4bae4;
+    background-color: #45235c;
+}
+
+.account {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.account p {
+    color: #BABECC;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.account img {
+    width: 50px;
+    border-radius: 50%;
+    padding: 1px;
+    border: #BABECC 1px solid;
+}
+
+.account1 p {
+    text-align: center;
+    color: #BABECC;
+}
+
+.userImg {
+    width: 70px;
+    border-radius: 0%;
+    border: none;
+}
+
+.box-close-cart {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.btn-close-cart {
+    color: #45235c;
+    background-color: #f8eeff;
+    border: none;
+    width: 40px;
+    font-size: 25px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
 
 @media all and (max-width : 1200px) {
     .text-about {

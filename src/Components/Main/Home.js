@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import Video from '../../Video';
 import Main from './Main';
 import { Link } from 'react-router-dom';
+import Video from '../../Video';
 
 const textAnimation = {
     hidden: {

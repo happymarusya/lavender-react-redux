@@ -1,5 +1,5 @@
 import React from "react";
-import video from './lavender.mp4'
+import video from './lavender.mp4';
  
 const Video = () => {
     return (

@@ -12,11 +12,19 @@ import Shop from "../../Pages/Shop"
 import About from "../../Pages/About";
 import Contact from "../../Pages/Contact";
 import TotalArticlesNav from "../Cart/TotalArticlesNav";
+import Account from '../../Auth/Account';
+import Login from '../../Auth/Login';
+import Logout from '../../Auth/Logout';
 
 
 export const Nav = () => {
     const [isActive, setActive] = useState(true);
     const [colorNav, setColorNav] = useState(false);
+    const [authBox, setAuthBox] = useState(false)
+
+    const authBoxActiv = () => {
+        setAuthBox(!authBox);
+    }
 
 const toggleCart = () => {
     setActive(!isActive);
@@ -31,6 +39,7 @@ const toggleVisible = () => {
     setColorNav(false)
     }
 };
+
 
 window.addEventListener('scroll', toggleVisible);
 
@@ -58,10 +67,25 @@ window.addEventListener('scroll', toggleVisible);
                             <span className='spanQuantityCart'><TotalArticlesNav/></span> 
                             {/* ****amount of articles in the cart*** */}
                         </button>
+                        <button onClick={() => authBoxActiv()} className='btnMore cont'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#300c45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path fillRule="evenodd" d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        </button>
                     </div>
                 </span>
             </nav>
-            </div>
+            <div className={ authBox ? 'auth-containe-true' : 'auth-containe-false'}>
+          <div className='box-close-cart'>
+            <button className='btn-close-cart' onClick={() => authBoxActiv()}><i className='fas	fa-times'></i></button>
+          </div>
+          <div className='box-auth'>
+            <Account/>
+            <Login/>
+            <Logout/>
+          </div>
+        </div>
+    </div>
 
         <Routes>
             <Route path="/" element ={ <Home /> } />

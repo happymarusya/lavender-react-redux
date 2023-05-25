@@ -1,4 +1,4 @@
-import image from '../about.jpg'
+import image from './about.jpg'
 import { motion } from 'framer-motion';
 
 const textAnimation = {
